@@ -112,6 +112,40 @@ h1 {
     padding: 0;
 }
 
+.code-block {
+    position: relative;
+    margin: 1rem 0;
+}
+
+.copy-button {
+    display: none;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 4px 8px;
+    background: #2d3748;
+    color: #e2e8f0;
+    border: 1px solid #4a5568;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.code-block:hover .copy-button {
+    display: block;
+}
+
+.copy-button:hover {
+    background: #4a5568;
+    border-color: #718096;
+}
+
+.copy-button:active {
+    transform: translateY(1px);
+}
+
 .right-panel {
     display: flex;
     flex-direction: column;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stack Lang - Stack-based Programming Language</title>
+    <title>Stack Lang</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
@@ -35,16 +35,16 @@
                         <h3>Arithmetic</h3>
                         <div class="commands">
                             <code>+</code> Add top two values
-                            <code>-</code> Subtract
+                            <code>-</code> Subtract (a b → a-b)
                             <code>*</code> Multiply
-                            <code>/</code> Divide
+                            <code>/</code> Divide (a b → a/b)
                         </div>
                     </div>
 
                     <div class="doc-section">
                         <h3>Comparison</h3>
                         <div class="commands">
-                            <code>=</code> Equal to
+                            <code>=</code> Equal to (returns 1 or 0)
                             <code>&lt;</code> Less than
                             <code>&gt;</code> Greater than
                         </div>
@@ -54,16 +54,75 @@
                         <h3>Functions</h3>
                         <div class="commands">
                             <code>def name:</code> Define function
+                            <code>name</code> Call function by name
                         </div>
-                        <pre><code>def double:
+                        <div class="code-block">
+                            <button class="copy-button">Copy</button>
+                            <pre><code>def double:
     dup
-    +</code></pre>
+    +
+
+def square:
+    dup
+    *</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="doc-section">
+                        <h3>Control Flow</h3>
+                        <div class="commands">
+                            <code>if:</code> If top of stack is 1 (true)
+                            <code>else:</code> Optional else block
+                        </div>
+                        <div class="code-block">
+                            <button class="copy-button">Copy</button>
+                            <pre><code># Check if number is positive
+push 5
+dup
+push 0
+>
+if:
+    println  # Outputs: 5
+else:
+    drop
+    push 0
+    println</code></pre>
+                        </div>
                     </div>
 
                     <div class="doc-section">
                         <h3>Output</h3>
                         <div class="commands">
-                            <code>println</code> Print top value
+                            <code>println</code> Print top value with newline
+                            <code>print</code> Print top value without newline
+                        </div>
+                        <div class="code-block">
+                            <button class="copy-button">Copy</button>
+                            <pre><code># Print numbers
+push 5
+println
+push 10
+print</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="doc-section">
+                        <h3>Examples</h3>
+                        <div class="code-block">
+                            <button class="copy-button">Copy</button>
+                            <pre><code># Calculate (3 + 4) * 2
+push 3
+push 4
++     # Stack now has 7
+push 2
+*     # Stack now has 14
+println  # Outputs 14
+
+# Compare numbers
+push 5
+push 3
+>     # Returns 1 (true)
+println</code></pre>
                         </div>
                     </div>
                 </div>

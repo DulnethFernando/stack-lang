@@ -287,6 +287,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const runButton = document.getElementById('runButton');
     const output = document.getElementById('output');
 
+    // Add copy functionality
+    document.querySelectorAll('.copy-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const code = button.nextElementSibling.querySelector('code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.style.background = '#16a34a';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '';
+                }, 1500);
+            });
+        });
+    });
+
     runButton.addEventListener('click', () => {
         // Create a new interpreter instance for each execution
         const interpreter = new StackLang();
