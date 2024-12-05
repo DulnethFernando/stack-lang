@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Lang - Stack-based Programming Language</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Stack Lang</h1>
+            <p class="subtitle">A simple yet powerful stack-based programming language</p>
+        </header>
+
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="documentation">
+                    <h2>Quick Reference</h2>
+                    
+                    <div class="doc-section">
+                        <h3>Stack Operations</h3>
+                        <div class="commands">
+                            <code>push n</code> Push number n onto stack
+                            <code>dup</code> Duplicate top value
+                            <code>swap</code> Swap top two values
+                            <code>drop</code> Remove top value
+                        </div>
+                    </div>
+
+                    <div class="doc-section">
+                        <h3>Arithmetic</h3>
+                        <div class="commands">
+                            <code>+</code> Add top two values
+                            <code>-</code> Subtract
+                            <code>*</code> Multiply
+                            <code>/</code> Divide
+                        </div>
+                    </div>
+
+                    <div class="doc-section">
+                        <h3>Comparison</h3>
+                        <div class="commands">
+                            <code>=</code> Equal to
+                            <code>&lt;</code> Less than
+                            <code>&gt;</code> Greater than
+                        </div>
+                    </div>
+
+                    <div class="doc-section">
+                        <h3>Functions</h3>
+                        <div class="commands">
+                            <code>def name:</code> Define function
+                        </div>
+                        <pre><code>def double:
+    dup
+    +</code></pre>
+                    </div>
+
+                    <div class="doc-section">
+                        <h3>Output</h3>
+                        <div class="commands">
+                            <code>println</code> Print top value
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="editor-section">
+                    <h2>Code Editor</h2>
+                    <div class="editor-container">
+                        <textarea id="codeInput" spellcheck="false" placeholder="Enter your code here...">push 5
+push 3
++
+println</textarea>
+                        <button id="runButton">▶ Run Code</button>
+                    </div>
+                </div>
+
+                <div class="output-section">
+                    <h2>Output</h2>
+                    <div id="output"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
