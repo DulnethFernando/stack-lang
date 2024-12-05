@@ -13,7 +13,7 @@ A web-based stack-based programming language with an interactive interpreter.
 
 ## Try It Out
 
-Visit [GitHub Pages URL] to try Stack Lang in your browser!
+Visit https://dulnethfernando.github.io/stack-lang/ or https://stack-lang.vercel.app/ to try Stack Lang in your browser!
 
 ## Examples
 
